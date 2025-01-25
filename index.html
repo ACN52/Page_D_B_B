@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ознакомительная страница</title>
+    <style>
+        body {
+            background-color: #90ee90; /* Светло-зеленый фон */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px; /* Уменьшаем отступ снизу заголовка */
+        }
+        .description {
+            font-weight: normal; /* Обычный вес шрифта */
+            max-width: 600px; /* Максимальная ширина текста */
+            margin: 0 auto 10px auto; /* Центрирование и отступ снизу */
+            text-align: center; /* Центрируем текст */
+        }
+        .container {
+            display: flex; /* Используем Flexbox для создания колонок */
+            justify-content: center; /* Центрируем колонки по горизонтали */
+            flex-wrap: wrap; /* Позволяем колонкам переноситься на новую строку при необходимости */
+        }
+        .column {
+            max-width: 300px; /* Максимальная ширина колонки */
+            margin: 10px; /* Отступы между колонками */
+            display: flex;
+            flex-direction: column; /* Вертикальное расположение элементов */
+            align-items: center; /* Центрируем элементы внутри колонки */
+        }
+        .row {
+            height: 110px; /* Фиксированная высота для каждого ряда */
+            margin: 5px; /* Отступы между рядами */
+            display: flex;
+            flex-direction: column; /* Вертикальное расположение элементов */
+            align-items: center; /* Центрируем элементы внутри ряда */
+            justify-content: flex-start; /* Начинаем заполнение сверху ряда */
+        }
+        img {
+            max-width: 50%;
+            height: auto;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10px; /* Закругленные углы */
+        }
+        button:hover {
+            background-color: #99b09a; /* Другой цвет при наведении */
+        }               
+    </style>
+</head>
+
+<body>
+    <h1>Страница собаководов г. Бор (Нижегородская обл)!</h1>
+
+    <p class="description">Добро пожаловать на страницу. 
+        Здесь можно перейти на Телеграм-бота или Присоединиться в Группу собаководов.
+    </p>
+
+    <div class="container">
+        <div class="column">
+            <div class="row">
+                <p class="description">
+                    В Телеграм-боте указаны телефоны вет.клиник,
+                    телефоны приюта, можно связаться с разработчиком.
+                </p>
+            </div>
+            <div class="row">
+                <img src="icon_d_b_b.jpg" alt="Скрин Тбота"> 
+                <button onclick="window.location.href='https://t.me/Dogs_Bor_bot'">Перейти на Тбота</button>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="row">
+                <p class="description">
+                    В Группе собаководов города Бор
+                    будем оперативно решать вопросы, связанные с
+                    собаководством; делиться фото и видео; и просто
+                    общаться.
+                </p>
+            </div>
+            <div class="row">
+                <img src="icon_group.jpg" alt="Скрин Группы">
+                <button onclick="window.location.href='https://t.me/SobakovodyBor'">Присоединиться к Группе собаководов</button>
+                <!-- <button onclick="alert('Хорошего вам настроения. Окно можно закрыть.')">Резервная кнопка</button> -->
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
+
